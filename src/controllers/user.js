@@ -10,6 +10,8 @@ exports.createUser = async (req, res) => {
             address_2: req.body.address_2,
             email: req.body.email,
             pass: req.body.pass  
+            //field for token?
+            //field for createdAt?
     });
         console.log(data);
         res.send("successfully received data!")

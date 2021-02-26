@@ -1,0 +1,4 @@
+CREATE TABLE orders (
+id INT AUTO_INCREMENT PRIMARY KEY,
+customer_id INT NOT NULL,
+product_id INT NOT NULL);
