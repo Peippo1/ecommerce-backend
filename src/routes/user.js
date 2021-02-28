@@ -10,4 +10,4 @@ const {createUser} = require('../controllers/user');
 //routes called here
 userRouter.post("/signup", hash, createUser);
 
-module.exports = { userRouter};
+module.exports = {userRouter};
