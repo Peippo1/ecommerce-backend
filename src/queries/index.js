@@ -33,7 +33,30 @@ try {
 
 } catch (error) {
     console.log(error);
-    res.send("error!");
+    res.send("error retrieving data!");
+}
+
+}
+
+exports.search = async (val) => {
+
+try {
+    let data = await promisifedQuery(`SELECT * FROM products WHERE product_name LIKE "%${val}%"`);
+
+    console.log(data);
+
+    if (data.length <1) {
+        return ({
+            message: "no results"
+        })
+    }
+    else {
+        return data;
+    }
+
+} catch (error) {
+    console.log(error);
+    res.send("error performing query!")
 }
 
 }
