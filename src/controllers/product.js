@@ -3,7 +3,7 @@ const { retriveSelectedproducts, search } = require('../queries');
 exports.retrieveProducts = async (req, res) => {
     try {
 
-        const data = await retriveSelectedproducts(req.body.query);
+        const data = await retriveSelectedproducts(req.params.result);
         console.log(data);
         res.send(data);
     } catch (error) {
@@ -15,7 +15,7 @@ exports.retrieveProducts = async (req, res) => {
 exports.searchProducts = async (req, res) => {
 
     try{
-        const data = await search(req.body.query);
+        const data = await search(req.params.result);
         console.log(data);
         res.send(data);
     } catch(error) {
