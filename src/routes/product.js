@@ -8,7 +8,7 @@ const {retrieveProducts, searchProducts} = require('../controllers/product');
 
 
 //routes called here
-productRouter.get("/products/:result", /*middleware, if applicaple*/ retrieveProducts);
+productRouter.get("/category/:result", /*middleware, if applicaple*/ retrieveProducts);
 productRouter.get("/search/:result", searchProducts)
 
 module.exports = {productRouter};
